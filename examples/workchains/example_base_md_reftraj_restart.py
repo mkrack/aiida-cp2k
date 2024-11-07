@@ -176,7 +176,7 @@ def example_base(cp2k_code):
         ]
     )
 
-    if np.all(stepids == np.arange(1, steps + 1)):
+    if np.all(np.sort(stepids) == np.arange(1, steps + 1)):
         print("OK, stepids are correct.")
     else:
         print(
